@@ -1,0 +1,13 @@
+body {
+    background-color: green;
+}
+
+.form-input:focus{
+    border-color: pink;
+    background-color: white;
+
+}
+
+.form-hidden{
+    display: none;
+}

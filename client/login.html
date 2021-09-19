@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <form action="" class="form" id="login">
+            <h1 class="form-title">Login</h1>
+            <div class="form-message form-message-error">Incorrect Login Information</div>
+            <div class="inputs">
+                <input type="text" class="form-input" autofocus placeholder="username">
+                <div class="form-input-error">Username Error</div>
+            </div>
+            <div class="inputs">
+                <input type="text" class="form-input" autofocus placeholder="password">
+                <div class="form-input-error">Password Error</div>
+            </div>
+            <button class="form-button" type="submit">Continue</button>
+            <p class="form-text">
+                <a class="create-link" id="linkCreateAccount">Create an Account</a>
+            </p>
+        </form>
+        <form action="" class="form form-hidden" id="createAccount">
+            <h1 class="form-title">Create Account</h1>
+            <div class="form-message form-message-error">Incorrect Login Information</div>
+            <div class="inputs">
+                <input type="text" class="form-input" autofocus placeholder="username">
+                <div class="form-input-error">Username Error</div>
+            </div>
+            <div class="inputs">
+                <input type="text" class="form-input" autofocus placeholder="Email Address">
+                <div class="form-input-error">Email Error</div>
+            </div>
+            <div class="inputs">
+                <input type="text" class="form-input" autofocus placeholder="password">
+                <div class="form-input-error">Password Error</div>
+            </div>
+            <div class="inputs">
+                <input type="text" class="form-input" autofocus placeholder="confirm password">
+                <div class="form-input-error">Password Error</div>
+            </div>
+            <button class="form-button" type="submit">Continue</button>
+            <p class="form-text">
+                <a class="create-link" id="linkLogin">Sign In</a>
+            </p>
+        </form>
+    </div>
+</body>
+<script src="client.js"></script>
+</html>
