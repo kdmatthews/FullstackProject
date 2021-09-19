@@ -60,12 +60,12 @@ body {
     display:block;
     width: 100%;
     padding: 1rem;
-    margin: 1rem;
+    
     box-sizing: border-box;
     border-radius: 4px;
     border: rgb(238, 234, 234);
     outline: none;
-    background: rgb(209, 224, 243);
+    background:white(209, 224, 243);
 
 }
 
@@ -83,9 +83,10 @@ body {
 
 .form-button{
     width: 100%;
-   
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     color: white;
     border: none;
     border-radius: 4px;
@@ -103,7 +104,7 @@ body {
     text-align: center;
 }
 .create-link{
-    color: pink;
+    color: blue;
     text-decoration: none;
     cursor: pointer;
 }

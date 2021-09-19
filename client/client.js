@@ -43,6 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setFormMessage(loginForm, "error", "Invalid")
     });
+    createAccountForm.addEventListener('submit', e => {
+        e.preventDefault();
+        // Fetch Goes Here
+    })
 
     document.querySelectorAll(".form-input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
