@@ -23,11 +23,11 @@ app.post("/create_user", (req,res) => {
 res.send(err);
     };
 });
-//Read * info
-app.get("/read_ride", (req,res) => {
+//Read  SELECT * info
+app.get("/read_user", (req,res) => {
     try{
         creds.connect(async() => {
-        const data = await creds.query(`users(user_name, password) VALUES ('${req.body.user_name}','${req.body.password}')`)
+        const data = await creds.query(`SELECT * FROM users'`);
         res.send(`${req.body.user_name} ${req.body.password}`);    
             });
     }catch(err){
