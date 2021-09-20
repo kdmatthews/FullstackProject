@@ -45,7 +45,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     createAccountForm.addEventListener('submit', e => {
         e.preventDefault();
-        // Fetch Goes Here
+        const createUser = async () => {
+            const url = "http://localhost:3001/create_user"
+            const username = document.querySelector("#signUpUsername").value;
+            const password = document.querySelector("#signUpPassword").value;
+            
+            const userData = {
+                username,
+                password
+            };
+            console.log(userData)
+        
+            const createTheUser = await fetch(url, {
+                method: "POST",
+                mode: "cors",
+                headers: {
+                    'Content-Type': 'application/json',
+                 },
+                 body: JSON.stringify(userData),
+            })
+        }
     })
 
     document.querySelectorAll(".form-input").forEach(inputElement => {
