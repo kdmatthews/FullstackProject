@@ -21,7 +21,7 @@
 
 }
 
-
+/* Login Page */
 .form-input:focus{
     border-color: blue;
     background-color: darkgray;
@@ -114,3 +114,19 @@
 .create-link:hover{
     text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+/* Rides Page */
+
+
+
+
+
+
+/* Itinerary Page */
