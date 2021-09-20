@@ -45,11 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     createAccountForm.addEventListener('submit', e => {
         e.preventDefault();
-        const createUser = async () => {
-            const url = "http://localhost:3001/create_user"
-            const username = document.querySelector("#signUpUsername").value;
-            const password = document.querySelector("#signUpPassword").value;
-            
+        const createItem = async () => {
+            const url = "http://localhost:3007/createItem"
+            const username= document.querySelector("#signUpUsername").value;
+            const username= document.querySelector("#signUpPassword").value;
             const userData = {
                 username,
                 password
@@ -64,8 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
                  },
                  body: JSON.stringify(userData),
             })
+
+        createTheUser()
         }
     })
+    
 
     document.querySelectorAll(".form-input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
