@@ -17,12 +17,35 @@ function clearInputError(inputElement){
 }
 
 
+const createUser = async () => {
+    const url = "http:localhost:3001/create_user"
+    const username = document.querySelector("#signUpUsername").value;
+    const password = document.querySelector("#signUpPassword").value;
+    const userData = {
+        username,
+        password,
+    };
+    // console.log(userData)
+
+    const createTheUser = await fetch(url, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+            'Content-Type': 'application/json',
+         },
+         body: JSON.stringify(userData),
+    });
+
+
+};
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector('#login');
     const createAccountForm = document.querySelector('#createAccount');
-
+    
     document.querySelector('#linkCreateAccount').addEventListener('click', e => {
         e.preventDefault();
         loginForm.classList.add("form-hidden");
@@ -43,31 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setFormMessage(loginForm, "error", "Invalid")
     });
-    createAccountForm.addEventListener('submit', e => {
-        e.preventDefault();
-        const createItem = async () => {
-            const url = "http://localhost:3007/createItem"
-            const username= document.querySelector("#signUpUsername").value;
-            const username= document.querySelector("#signUpPassword").value;
-            const userData = {
-                username,
-                password
-            };
-            console.log(userData)
-        
-            const createTheUser = await fetch(url, {
-                method: "POST",
-                mode: "cors",
-                headers: {
-                    'Content-Type': 'application/json',
-                 },
-                 body: JSON.stringify(userData),
-            })
-
-        createTheUser()
-        }
-    })
     
+    const createUserButton = document.querySelector('#create-user')
+    createUserButton.addEventListener('click', e => {
+    e.preventDefault();
+    createUser();
+    console.log("button was pressed")
+});
 
     document.querySelectorAll(".form-input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
@@ -80,5 +85,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 clearInputError(inputElement);
             })
     })
-})
+});
     

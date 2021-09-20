@@ -13,16 +13,16 @@ app.use(express.json());
 
 
 //CREATE
-// app.post("/create_user", (req,res) => {
-//     try{
-//         creds.connect(async() => {
-//         const data = await creds.query(`INSERT INTO users(user_name, password) VALUES ('${req.body.user_name}','${req.body.password}')`)
-//         res.send(`Inserted New user with ${req.body.user_name} ${req.body.password}`);    
-//             });
-//     }catch(err){
-// res.send(err);
-//     };
-// });
+app.post("/create_user", (req,res) => {
+    try{
+        creds.connect(async() => {
+        const data = await creds.query(`INSERT INTO users(user_name, password) VALUES ('${req.body.user_name}','${req.body.password}')`)
+        res.send(`Inserted New user with ${req.body.user_name} ${req.body.password}`);    
+            });
+    }catch(err){
+res.send(err);
+    };
+});
 
 //Read  SELECT * info
 app.get("/read_user", (req,res) => {
