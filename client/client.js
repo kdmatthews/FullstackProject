@@ -35,7 +35,23 @@ document.addEventListener("DOMContentLoaded", () => {
         loginForm.classList.remove('form-hidden')
 
     });
-
+    const loginUser = async () => {
+        const user_name = document.querySelector("#loginUsername").value
+        const password = document.querySelector("#loginPassword").value
+        const loginData = {
+            user_name,
+            password,
+        }
+        const readUserData = await fetch("http://localhost:3001/read_user", {
+            method: "GET",
+            mode: "cors",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(loginData),
+        });
+        if (loginData === readUserData)
+    }
     loginForm.addEventListener("submit", e => {
         e.preventDefault();
 
