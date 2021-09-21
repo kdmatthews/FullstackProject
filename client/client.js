@@ -1,3 +1,5 @@
+
+
 function setFormMessage(formElement, type, message){
     const messageElement = formElement.querySelector('.form-message')
 
@@ -49,11 +51,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(loginData),
-        });
-        if (loginData === readUserData)
+        }) 
+        console.log(readUserData.status);
+        console.log(readUserData.status.Text);
+
+        if (response.status === 200) {
+            let data = await response.text();
+        }
+       
     }
     loginForm.addEventListener("submit", e => {
         e.preventDefault();
+       
 
         // Perfom your fetch Login
 
