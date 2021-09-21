@@ -20,38 +20,19 @@ function clearInputError(inputElement){
 }
 
 const createAccountForm = document.querySelector('#createAccount');
-const createUser = async () => {
-    const url = "/create_user"
-    const user_name = document.querySelector("#signUpUsername").value;
-    const password = document.querySelector("#signUpPassword").value;
-    const userData = {
-        user_name: user_name,
-        password: password,
-    };
-    let data = new FormData();
-    data.append('json', JSON.stringify( userData ))
-    console.log(userData)
 
-    const createTheUser = await fetch("http://localhost:3001/create_user", {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-            'Content-Type': 'application/json',
-         },
-         body: JSON.stringify(data),
-         
-    });
+    
 
-  
-    // .then(response => response.json())
-    // .then(userData => {
-    //     console.log('Success', userData)
-    // })
-    // .catch(error => {
-    //     console.error("Error", error)
-    // });
 
-};
+// .then(response => response.json())
+// .then(userData => {
+//     console.log('Success', userData)
+// })
+// .catch(error => {
+//     console.error("Error", error)
+// });
+
+
 
 
 
@@ -82,6 +63,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     
+const createUser = async () => {
+    const url = "/create_user"
+    const user_name = document.querySelector("#signUpUsername").value;
+    const password = document.querySelector("#signUpPassword").value;
+    const userData = {
+        user_name: user_name,
+        password: password,
+    };
+
+    const createUserData = fetch("http://localhost:3001/create_user", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+        
+    });
+};
     createAccountForm.addEventListener('submit', e => {
     e.preventDefault();
     createUser();
