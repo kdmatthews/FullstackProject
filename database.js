@@ -3,7 +3,7 @@ const cors = require("cors");
 const app = express();
 // const url = "postgres://wxinvkdg:K7nLI4ZVLa3UfIeds01LON96wzevUCHD@chunee.db.elephantsql.com/wxinvkdg"
 
-
+const cors = require('cors');
 
 const creds = require("./db");
 
@@ -26,18 +26,18 @@ app.use(cors());
     
 // });
 
-//Read  SELECT * info: USER
-// app.get("/read_user", (req,res) => {
-//     try{
-//         creds.connect(async() => {
-//         const data = await creds.query(`SELECT * FROM users`);
-//         res.send (data);    
-//             });
-//     }catch(err){
-// res.send(err);
-//     };
+// Read  SELECT * info: USER
+app.get("/read_user", (req,res) => {
+    try{
+        creds.connect(async() => {
+        const data = await creds.query(`SELECT * FROM users`);
+        res.send (data);    
+            });
+    }catch(err){
+res.send(err);
+    };
     
-// });
+});
 
 //UPDATE: USER
 // app.put("/update_user", (req,res) => {
