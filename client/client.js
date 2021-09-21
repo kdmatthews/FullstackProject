@@ -1,3 +1,6 @@
+
+
+
 function setFormMessage(formElement, type, message){
     const messageElement = formElement.querySelector('.form-message')
 
@@ -16,26 +19,37 @@ function clearInputError(inputElement){
     inputElement.parentElement.querySelector(".form-input-error-message").innerHTML = "";
 }
 
-
+const createAccountForm = document.querySelector('#createAccount');
 const createUser = async () => {
-    const url = "http:localhost:3001/create_user"
-    const username = document.querySelector("#signUpUsername").value;
+    const url = "/create_user"
+    const user_name = document.querySelector("#signUpUsername").value;
     const password = document.querySelector("#signUpPassword").value;
     const userData = {
-        username,
-        password,
+        user_name: user_name,
+        password: password,
     };
-    // console.log(userData)
+    let data = new FormData();
+    data.append('json', JSON.stringify( userData ))
+    console.log(userData)
 
-    const createTheUser = await fetch(url, {
+    const createTheUser = await fetch("http://localhost:3001/create_user", {
         method: "POST",
-        mode: "cors",
+        mode: "no-cors",
         headers: {
             'Content-Type': 'application/json',
          },
-         body: JSON.stringify(userData),
+         body: JSON.stringify(data),
+         
     });
 
+  
+    // .then(response => response.json())
+    // .then(userData => {
+    //     console.log('Success', userData)
+    // })
+    // .catch(error => {
+    //     console.error("Error", error)
+    // });
 
 };
 
@@ -44,7 +58,7 @@ const createUser = async () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector('#login');
-    const createAccountForm = document.querySelector('#createAccount');
+    
     
     document.querySelector('#linkCreateAccount').addEventListener('click', e => {
         e.preventDefault();
@@ -67,10 +81,13 @@ document.addEventListener("DOMContentLoaded", () => {
         setFormMessage(loginForm, "error", "Invalid")
     });
     
-    const createUserButton = document.querySelector('#create-user')
-    createUserButton.addEventListener('click', e => {
+    
+    createAccountForm.addEventListener('submit', e => {
     e.preventDefault();
     createUser();
+    // const request = new XMLHttpRequest();
+    // request.open("post", "http://localhost:3001/create_user")
+    // request.send(new FormData(createAccountForm));
     console.log("button was pressed")
 });
 
