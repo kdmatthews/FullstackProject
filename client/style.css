@@ -2,7 +2,7 @@
 
 
 .outside-container {
-    background-color: grey;
+    background-color: #0067B3;
     margin: 0;
     height: 100vh;
     display: flex;
@@ -12,9 +12,9 @@
 .main-container{
     margin: 1rem;
     padding: 2rem;
-    width: 400px;
-    max-width: 400px;
-    background-color: aquamarine;
+    width: 800px;
+    max-width: 800px;
+    background-color: #FFD53D;
     font-size: 18px;
     box-shadow: 0 0 40px black(0, 0, 0, .2);
     border-radius: 4px;
@@ -24,18 +24,18 @@
 /* Login Page */
 .form-input:focus{
     border-color: blue;
-    background-color: darkgray;
+    background-color: #D4F1F4;
 
 }
 
 .form-hidden{
     display: none;
 }
-.main-container,
+/* .main-container,
 .form-input,
 .form-button {
     /* put font style here 500, 400, and bold */
-}
+
 .form-title{
     margin-bottom: 2rem;
     text-align: center;
@@ -95,10 +95,10 @@
     border-radius: 4px;
     outline: none;
     cursor: pointer;
-    background: blue;
+    background: #0000A3;
 }
 .form-button:hover{
-    background: darkslateblue;
+    background: #0067B3;
 }
 .form-button:active{
     transform: scale(0.98);
