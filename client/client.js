@@ -43,30 +43,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setFormMessage(loginForm, "error", "Invalid")
     });
-    createAccountForm.addEventListener('submit', e => {
+    const createUser = async () => {
+        const user_name = document.querySelector("#signUpUsername").value;
+        const password = document.querySelector("#signUpPassword").value;
+        const userData = {
+            user_name: user_name,
+            password: password,
+        };
+        console.log(userData)
+        const createUserData = await fetch("http://localhost:3001/create_user", {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
+            
+            
+        });
+        console.log(createUserData)
+    };
+        createAccountForm.addEventListener('submit', e => {
         e.preventDefault();
-        const createItem = async () => {
-            const url = "http://localhost:3007/createItem"
-            const username= document.querySelector("#signUpUsername").value;
-            const username= document.querySelector("#signUpPassword").value;
-            const userData = {
-                username,
-                password
-            };
-            console.log(userData)
-        
-            const createTheUser = await fetch(url, {
-                method: "POST",
-                mode: "cors",
-                headers: {
-                    'Content-Type': 'application/json',
-                 },
-                 body: JSON.stringify(userData),
-            })
+        createUser();
 
-        createTheUser()
-        }
-    })
+        console.log("button was pressed")
+    });
     
 
     document.querySelectorAll(".form-input").forEach(inputElement => {
