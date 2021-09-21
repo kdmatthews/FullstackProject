@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 // const url = "postgres://wxinvkdg:K7nLI4ZVLa3UfIeds01LON96wzevUCHD@chunee.db.elephantsql.com/wxinvkdg"
 
@@ -9,7 +10,7 @@ const creds = require("./db");
 const PORT = 3001;
 
 app.use(express.json());
-
+app.use(cors());
 
 //CREATE: USER
 // app.post("/create_user", (req,res) => {
