@@ -1,0 +1,132 @@
+
+
+
+.outside-container {
+    background-color: #0067B3;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-container{
+    margin: 1rem;
+    padding: 2rem;
+    width: 700px;
+    max-width: 700px;
+    background-color: #FFD53D;
+    font-size: 18px;
+    box-shadow: 0 0 40px black(0, 0, 0, .2);
+    border-radius: 4px;
+
+}
+
+/* Login Page */
+.form-input:focus{
+    border-color: blue;
+    background-color: #D4F1F4;
+
+}
+
+.form-hidden{
+    display: none;
+}
+/* .main-container,
+.form-input,
+.form-button {
+    /* put font style here 500, 400, and bold */
+
+.form-title{
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 50px;
+}
+
+.form-message{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form-message-success{
+    color: green;
+}
+.form-message-error{
+    color: red;
+}
+
+.inputs{
+    margin-bottom: 1rem;
+
+}
+
+.form-input{
+    display:block;
+    width: 100%;
+    padding: 1rem;
+    
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: rgb(238, 234, 234);
+    outline: none;
+    background:white(209, 224, 243);
+
+}
+
+.form-input-error{
+    color: red;
+    border-color: red;
+}
+
+.form-input-error-message{
+    margin-top: 0 .5rem;
+    font-size: .85rem;
+    color: red;
+    border: red;
+}
+
+.form-button{
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    background: #0000A3;
+}
+.form-button:hover{
+    background: #0067B3;
+}
+.form-button:active{
+    transform: scale(0.98);
+}
+.form-text{
+    text-align: center;
+}
+.create-link{
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+.create-link:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* Rides Page */
+
+
+
+
+
+
+/* Itinerary Page */
