@@ -45,9 +45,11 @@ const readRides = async () => {
         const ridePicture = document.createElement('img');
         const button = document.createElement('button');
         button.className = "add-button"
+        button.textContent = "Add to Itinerary"
         ridePicture.src = ride_url
         console.log(ridePicture)
         const rideDetails = document.createElement('div');
+        rideDetails.className = "ride-details"
         rideName.innerHTML = ride_name;
         console.log(rideName)
         rideDetails.append(rideName, ridePicture, button);
