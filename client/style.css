@@ -245,3 +245,10 @@ button:hover{
     justify-content: flex-start;
     align-items: flex-end;
 }
+
+.itinerary-title{
+    margin: 5rem;
+    color: white;
+    font-size: 6rem;
+    font-family: 'Caveat', cursive;
+}
