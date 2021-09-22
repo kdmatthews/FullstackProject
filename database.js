@@ -11,7 +11,7 @@ const PORT = 3001;
 app.use(express.json());
 app.use(cors());
 
-CREATE: USER: GOOD2GO
+// CREATE: USER: GOOD2GO
 app.post("/create_user", (req,res) => {
     creds.connect(async() => {
     try{
@@ -92,6 +92,7 @@ app.get("/read_itinerary", (req,res) => {
 res.send(err);
     };
 });
+
 //DELETE: RIDE by id FROM ITIERARY: ITINTERARY GOOD2GO
 app.delete("/delete_id/:id", (req,res) => {
     const id = req.params.id;
