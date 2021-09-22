@@ -50,11 +50,15 @@
             <h1 class="form-title">Login</h1>
             <div class="form-message form-message-error"></div>
             <div class="inputs">
-                <input type="text" class="form-input" id="loginUsername" autofocus placeholder="username">
+              <i class="fa fa-user icon" id="username">Username</i>
+                <input type="text" class="form-input" id="loginUsername" autofocus>
+                
+              
                 <div class="form-input-error-message"></div>
             </div>
             <div class="inputs">
-                <input type="password" class="form-input" id="loginPassword" autofocus placeholder="password">
+              <i class="fa fa-lock icon" id="password">  Password</i>
+                <input type="password" class="form-input" id="loginPassword" autofocus>
                 <div class="form-input-error-message"></div>
             </div>
             <button class="form-button" type="submit">Continue</button>
@@ -66,28 +70,33 @@
             <h1 class="form-title">Create Account</h1>
             <div class="form-message form-message-error"></div>
             <div class="inputs">
-                <input type="text" id="signUpUsername" class="form-input" autofocus placeholder="username">
+              <i class="fa fa-user icon" id="username">Username</i>
+                <input type="text" id="signUpUsername" class="form-input" autofocus >
                 <div class="form-input-error-message"></div>
             </div>
             <div class="inputs">
-                <input type="email" class="form-input" autofocus placeholder="Email Address">
+              <i class="fa fa-envelope-open icon" id="username">  Email</i>
+                <input type="email" class="form-input" autofocus >
                 <div class="form-input-error-message"></div>
             </div>
             <div class="inputs">
-                <input type="password" id="signUpPassword" class="form-input" autofocus placeholder="password">
+              <i class="fa fa-lock icon" id="password">  Password</i>
+                <input type="password" id="signUpPassword" class="form-input" autofocus >
                 <div class="form-input-error-message"></div>
             </div>
             <div class="inputs">
-                <input type="password" class="form-input" autofocus placeholder="confirm password">
+              <i class="fa fa-lock icon" id="password">  Confirm Password</i>
+                <input type="password" class="form-input" autofocus >
                 <div class="form-input-error-message"></div>
             </div>
             <button class="form-button" type="submit">Continue</button>
             <p class="form-text">
-                <a class="create-link" id="linkLogin">Sign In</a>
+                <a class="create-link" id="linkLogin">Already have an account? Sign In</a>
             </p>
         </form>
     </div>
     </div>
 </body>
 <script src="client.js"></script>
+<script src="https://use.fontawesome.com/433f8c7f6a.js"></script>
 </html>

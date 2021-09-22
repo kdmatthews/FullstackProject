@@ -42,7 +42,9 @@ const readRides = async () => {
         const ride_url = ride_data.ride_url
         console.log(ride_url)
         const rideName = document.createElement('p');
+        rideName.className ="ride-name";
         const ridePicture = document.createElement('img');
+        ridePicture.className = "ride-pictures";
         const button = document.createElement('button');
         button.className = "add-button"
         button.textContent = "Add to Itinerary"

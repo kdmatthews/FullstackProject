@@ -109,48 +109,5 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
     
-// RIDES
 
-// const readData = async () => {
-//     const url = "http://localhost:3007/getItems";
-//     const userData = await fetch (url, {
-//         method: "POST",
-//         mode: "cors",
-//         headers: {
-//             'Content-Type': 'application/json',
-//             },
-        
-//     });
-//     const json = await userData.json();
-//     for(const item of json) {
-//         const todo_item = item.todo_item
-//         const itemName = document.createElement('p');
-//         const itemDetails = document.createElement('div')
-//         itemName.innerHTML = todo_item
-//         itemDetails.append(itemName);
-//         mainContainer.append(itemDetails);
-const rideContainer = document.querySelector('#ride-container')
 
-const readRides = async () => {
-    const url = "http://localhost:3001/read_rides";
-    const rideData = await fetch (url, {
-        method: "GET",
-        mode: "cors",
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    const ridesJson = await rideData.json();
-    for (const ride of ridesJson){
-        const ride_item = ride.ride_item
-        const rideName = document.createElement('p');
-        const ridePicture = documenet.createElement('img');
-        const rideDetails = document.createElement('div');
-        rideName.innerHTML = ride_item;
-        rideDetails.append(rideName);
-        rideContainer.append(rideDetails);
-        console.log(ridesJson)
-    }
-}
-
-readRides();
