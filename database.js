@@ -12,7 +12,7 @@ const PORT = 3001;
 app.use(express.json());
 app.use(cors());
 
-//CREATE: USER
+//CREATE: USER: GOOD2GO
 // app.post("/create_user", (req,res) => {
 //     creds.connect(async() => {
 //     try{
@@ -26,7 +26,7 @@ app.use(cors());
     
 // });
 
-//Read  SELECT * info: USER
+//Read  SELECT * info: USER: GOOD2GO
 // app.get("/read_user", (req,res) => {
 //     try{
 //         creds.connect(async() => {
@@ -39,7 +39,7 @@ app.use(cors());
     
 // });
 
-//UPDATE: USER
+//UPDATE: USER: CHECK LATER ON
 // app.put("/update_user", (req,res) => {
 //     try{
 //         creds.connect(async() => {
@@ -52,28 +52,39 @@ app.use(cors());
 //     console.log(res.send);
 // });
 
-// //DELETE: USER
-// app.delete("/delete_user/:id", (req,res) => {
-//     const id = req.params.id;
-//     try{
-//         creds.connect(async() => {
-//         const data = await creds.query(`DELETE FROM users WHERE id=8`);
-//         res.send(`User has been deleted`);
-//         console.log(res.send);
-//             });
-//     }catch(err){
-// res.send(err);
-// };
-
-// });
-
-
-
-// Read  SELECT * info: RIDES
+// Read  SELECT * FROM: RIDES: GOOD2GO
 app.get("/read_rides", (req,res) => {
     try{
         creds.connect(async() => {
         const data = await creds.query(`SELECT * FROM rides`);
+        res.send (data);    
+            });
+    }catch(err){
+res.send(err);
+    };
+    
+});
+
+// Read  SELECT ride by id: RIDES: GOOD2GO
+app.get("/select_id/:id", (req,res) => {
+    const id = req.params.id;
+    try{
+        creds.connect(async() => {
+        const data = await creds.query(`SELECT * FROM rides WHERE id = ${id}`);
+        res.send (data);    
+            });
+    }catch(err){
+res.send(err);
+    };
+    
+});
+
+//DELETE: RIDE by id FROM ITIERARY: ITINTERARY
+app.delete("/delete_id/:id", (req,res) => {
+    const id = req.params.id;
+    try{
+        creds.connect(async() => {
+        const data = await creds.query(`DELETE * FROM itinerary WHERE id = ${id}`);
         res.send (data);    
             });
     }catch(err){
