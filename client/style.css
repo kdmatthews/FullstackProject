@@ -206,3 +206,31 @@ button:hover{
     font-size: 4rem;
 }
 /* Itinerary Page */
+/* Rides Page */
+
+.delete-button{
+    height: 4rem;
+    width: 30rem;
+    background-color: #40B0DF;
+    border: none;
+    font-size: 1.7rem;
+    color: #0067B3;
+    border-radius: 6px;
+    align-self: center;
+    margin-top: 1rem;
+    
+}
+
+.itinerary-container{
+    background-color: white;
+    margin: 2rem;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    
+    /* border: .3rem black solid; */
+    
+}
