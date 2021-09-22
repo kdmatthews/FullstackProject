@@ -165,10 +165,10 @@ button:hover{
     display: flex;
     flex-direction: column;
     /* gap: .5rem; */
-    border-top:#40B0DF solid .2rem;
+    border-top:#40B0DF solid .1rem;
     border-right:#40B0DF solid .1rem;
     border-left:#40B0DF solid .1rem;
-    /* border-bottom:#40B0DF solid .2rem; */
+    border-bottom:#40B0DF solid .1rem;
   
     
     

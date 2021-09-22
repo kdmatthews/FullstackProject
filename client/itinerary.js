@@ -1,3 +1,20 @@
+
+const rideDeleting = async (id) => {
+    const addRide = await fetch(`http://localhost:3001/delete_id/${id}`, {
+        method: "DELETE",
+        mode: "cors",
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+}
+
+
+
+
+
+
 const readItinerary= async () => {
     // const url = "http://localhost:3001/read_rides";
     const itineraryData = await fetch ("http://localhost:3001/read_itinerary", {
@@ -21,19 +38,27 @@ const readItinerary= async () => {
         const ridePicture = document.createElement('img');
         ridePicture.className = "itinerary-pictures";
         const button = document.createElement('button');
+        button.id = id
         button.className = "delete-button"
         button.textContent = "Delete from Itinerary"
         ridePicture.src = ride_url
-        console.log(ridePicture)
+        
         const rideDetails = document.createElement('div');
         rideDetails.className = "ride-details"
         rideName.innerHTML = ride_name;
-        console.log(rideName)
+      
         rideDetails.append(rideName, ridePicture, button);
-        console.log(rideDetails)
+       
         console.log(itineraryContainer)
        
         itineraryContainer.append(rideDetails);
+
+        button.addEventListener('click', e => {
+            // e.preventDefault
+           
+            rideDeleting(e.currentTarget.id)
+
+        })
         
 
         

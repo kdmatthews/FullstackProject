@@ -21,6 +21,16 @@
 //         itemName.innerHTML = todo_item
 //         itemDetails.append(itemName);
 //         mainContainer.append(itemDetails);
+const rideAdding = async (id) => {
+    const addRide = await fetch(`http://localhost:3001/select_id/${id}`, {
+        method: "GET",
+        mode: "cors",
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+}
 
 
 const readRides = async () => {
@@ -32,6 +42,8 @@ const readRides = async () => {
             'Content-Type': 'application/json'
         }
     })
+   
+    
     const json = await rideData.json();
     console.log(json)
     for (const i in json.rows){
@@ -40,30 +52,46 @@ const readRides = async () => {
         const ride_name = ride_data.ride_name
         const id = ride_data.id
         const ride_url = ride_data.ride_url
-        console.log(ride_url)
+        
         const rideName = document.createElement('p');
         rideName.className ="ride-name";
         const ridePicture = document.createElement('img');
         ridePicture.className = "ride-pictures";
         const button = document.createElement('button');
+        button.id = id
+        console.log(button.id)
         button.className = "add-button"
         button.textContent = "Add to Itinerary"
         ridePicture.src = ride_url
-        console.log(ridePicture)
+        
         const rideDetails = document.createElement('div');
         rideDetails.className = "ride-details"
         rideName.innerHTML = ride_name;
-        console.log(rideName)
+        
         rideDetails.append(rideName, ridePicture, button);
-        console.log(rideDetails)
-        console.log(rideContainer)
+        
        
         rideContainer.append(rideDetails);
         
-
+        button.addEventListener('click', e => {
+            e.preventDefault
+           
+            console.log( e.currentTarget.id)
+            rideAdding(e.currentTarget.id)
+        })
+       
         
     }
+    
 }
 
 readRides();
 
+// const button = document.querySelector('.add-button')
+// console.log(button.id)
+// function buttonID (){
+//     console.log(button.id)
+// }
+// button.addEventListener('click', e => {
+//     buttonID()
+// });
