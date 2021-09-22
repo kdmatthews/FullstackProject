@@ -22,8 +22,8 @@
 //         itemDetails.append(itemName);
 //         mainContainer.append(itemDetails);
 const rideAdding = async (id) => {
-    const addRide = await fetch(`http://localhost:3001/select_id/${id}`, {
-        method: "GET",
+    const addRide = await fetch(`http://localhost:3001/update_itinerary/${id}`, {
+        method: "PUT",
         mode: "cors",
         headers: {
             'Content-Type': 'application/json'

@@ -234,3 +234,14 @@ button:hover{
     /* border: .3rem black solid; */
     
 }
+
+.header-plan{
+    background-image: url("https://seaworld.com/orlando/-/media/seaworld-orlando/images/shows/dolphin-adventures/1900x500-swo-shows-dolphin-adventures.ashx?version=1_202106291020");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
