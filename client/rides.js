@@ -74,14 +74,14 @@ const readRides = async () => {
         rideContainer.append(rideDetails);
         
         button.addEventListener('click', e => {
-            // e.preventDefault
+            e.preventDefault
            
            
             rideAdding(e.currentTarget.id)
             const message = document.createElement('h4')
             message.innerHTML = `${ride_name} has been added to your itinerary`
             rideDetails.append(message);
-            // rideContainer.append(rideDetails)
+           
         })
        
         
@@ -91,11 +91,4 @@ const readRides = async () => {
 
 readRides();
 
-// const button = document.querySelector('.add-button')
-// console.log(button.id)
-// function buttonID (){
-//     console.log(button.id)
-// }
-// button.addEventListener('click', e => {
-//     buttonID()
-// });
+
