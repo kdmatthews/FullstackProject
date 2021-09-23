@@ -38,7 +38,7 @@ res.send(err);
     
 });
 
-//UPDATE: USER: CHECK LATER ON
+//UPDATE: RIDE ON ITINERARY: STILL NEEDED!!!
 // app.put("/update_user", (req,res) => {
 //     try{
 //         creds.connect(async() => {
@@ -64,8 +64,8 @@ res.send(err);
     
 });
 
-// Read  SELECT ride by id: RIDES: GOOD2GO
-app.get("/select_id/:id", (req,res) => {
+// Read  UPDATE ITINERARY by id: RIDES: GOOD2GO
+app.put("/update_itinerary/:id", (req,res) => {
     const id = req.params.id;
     try{
         creds.connect(async() => {
@@ -81,7 +81,7 @@ res.send(err);
     
 });
 
-// Read  SELECT * FROM: ITINERARY: GOOD2GO
+// Read  SELECT * FROM: ITINERARY:
 app.get("/read_itinerary", (req,res) => {
     try{
         creds.connect(async() => {
@@ -92,7 +92,7 @@ app.get("/read_itinerary", (req,res) => {
 res.send(err);
     };
 });
-
+// console.log();
 //DELETE: RIDE by id FROM ITIERARY: ITINTERARY GOOD2GO
 app.delete("/delete_id/:id", (req,res) => {
     const id = req.params.id;
