@@ -92,7 +92,7 @@ app.get("/read_itinerary", (req,res) => {
 res.send(err);
     };
 });
-
+// console.log();
 //DELETE: RIDE by id FROM ITIERARY: ITINTERARY GOOD2GO
 app.delete("/delete_id/:id", (req,res) => {
     const id = req.params.id;
