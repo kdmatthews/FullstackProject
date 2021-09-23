@@ -76,8 +76,12 @@ const readRides = async () => {
         button.addEventListener('click', e => {
             e.preventDefault
            
-            console.log( e.currentTarget.id)
+           
             rideAdding(e.currentTarget.id)
+            const message = document.createElement('h4')
+            message.innerHTML = `${ride_name} has been added to your itinerary`
+            rideDetails.append(message);
+           
         })
        
         
@@ -87,11 +91,4 @@ const readRides = async () => {
 
 readRides();
 
-// const button = document.querySelector('.add-button')
-// console.log(button.id)
-// function buttonID (){
-//     console.log(button.id)
-// }
-// button.addEventListener('click', e => {
-//     buttonID()
-// });
+

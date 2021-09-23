@@ -32,7 +32,6 @@ const readItinerary= async () => {
         const ride_name = itinerary_data.ride_name
         const id = itinerary_data.id
         const ride_url = itinerary_data.ride_url
-        console.log(ride_url)
         const rideName = document.createElement('p');
         rideName.className ="ride-name";
         const ridePicture = document.createElement('img');
@@ -41,22 +40,29 @@ const readItinerary= async () => {
         button.id = id
         button.className = "delete-button"
         button.textContent = "Delete from Itinerary"
-        ridePicture.src = ride_url
-        
+        ridePicture.src = ride_url 
         const rideDetails = document.createElement('div');
         rideDetails.className = "ride-details"
+        rideDetails.id = `div-${id}`
+        console.log(rideDetails.id)
         rideName.innerHTML = ride_name;
+
+       
       
         rideDetails.append(rideName, ridePicture, button);
        
-        console.log(itineraryContainer)
+       
        
         itineraryContainer.append(rideDetails);
 
         button.addEventListener('click', e => {
-            // e.preventDefault
+            e.preventDefault
            
             rideDeleting(e.currentTarget.id)
+            const deleteDiv = document.querySelector(`#div-${id}`)
+            console.log(deleteDiv)
+            deleteDiv.parentNode.removeChild(deleteDiv)
+
 
         })
         
