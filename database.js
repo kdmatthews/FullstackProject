@@ -81,7 +81,7 @@ res.send(err);
     
 });
 
-// Read  SELECT * FROM: ITINERARY: GOOD2GO
+// Read  SELECT * FROM: ITINERARY:
 app.get("/read_itinerary", (req,res) => {
     try{
         creds.connect(async() => {
