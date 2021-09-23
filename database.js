@@ -1,8 +1,14 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 // const url = "postgres://wxinvkdg:K7nLI4ZVLa3UfIeds01LON96wzevUCHD@chunee.db.elephantsql.com/wxinvkdg"
 
+const es6Renderer = require('express-es6-template-engine')
+app.engine('html', es6Renderer);
+app.set('views', '/client');
+app.set('view engine', 'html')
 
 const creds = require("./db");
 
@@ -10,6 +16,59 @@ const PORT = 3001;
 
 app.use(express.json());
 app.use(cors());
+app.use(cookieParser());
+app.use(
+    session({
+        secret: "secret",
+        resave: false,
+        saveUninitialized: true,
+        cookie: { secure: false, maxAge: 2592000 },
+    })
+    );
+
+// Login
+app.post("/login", (req, res) => {
+    const {user_name, password} = req.body
+    creds.connect(async() => {
+    try{
+        const checkIfUserExists = await creds.query(`SELECT FROM users WHERE user_name = '${user_name}' AND password = '${password}'' `)
+        const userFound = checkIfUserExists.dataValues;
+        console.log(userFound)
+        if(checkIfUserExists.dataValues){
+            req.session.user = userFound;
+            console.log('login')
+            res.redirect("/rides")
+        } else {
+            res
+            .status(401)
+            console.log(error)
+            .send("That is not a real user, maybe you need to register?");
+        }
+    }catch(err){
+        res.send(err);
+    };
+  });
+
+
+    
+
+
+// account page
+app.get('/rides_page', (req, res) => {
+   
+    try{
+        if(req.session.user){
+            res.render("/rides")
+        } else {
+            res.render("/login")
+        }
+    }catch(err){
+        res.send(err);
+    }; 
+        
+ });
+   
+});
 
 // CREATE: USER: GOOD2GO
 app.post("/create_user", (req,res) => {
@@ -37,6 +96,9 @@ res.send(err);
     };
     
 });
+// Cookies
+
+
 
 //UPDATE: RIDE ON ITINERARY: STILL NEEDED!!!
 // app.put("/update_user", (req,res) => {

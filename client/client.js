@@ -18,13 +18,13 @@ function clearInputError(inputElement){
     inputElement.parentElement.querySelector(".form-input-error-message").innerHTML = "";
 }
 
+const loginForm = document.querySelector('#login');
+const createAccountForm = document.querySelector('#createAccount');
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.querySelector('#login');
-    const createAccountForm = document.querySelector('#createAccount');
-
+   
     document.querySelector('#linkCreateAccount').addEventListener('click', e => {
         e.preventDefault();
         loginForm.classList.add("form-hidden");
@@ -37,37 +37,42 @@ document.addEventListener("DOMContentLoaded", () => {
         loginForm.classList.remove('form-hidden')
 
     });
-    // const loginUser = async () => {
-    //     const user_name = document.querySelector("#loginUsername").value
-    //     const password = document.querySelector("#loginPassword").value
-    //     const loginData = {
-    //         user_name,
-    //         password,
-    //     }
-    //     const readUserData = await fetch("http://localhost:3001/read_user", {
-    //         method: "GET",
-    //         mode: "cors",
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify(loginData),
-    //     }) 
-    //     console.log(readUserData.status);
-    //     console.log(readUserData.status.Text);
+});
 
-    //     if (response.status === 200) {
-    //         let data = await response.text();
-    //     }
+    const loginUser = async () => {
+        const user_name = document.querySelector("#loginUsername").value
+        const password = document.querySelector("#loginPassword").value
+        const loginData = {
+            user_name: user_name,
+            password: password,
+        }
+        const createLoginData = await fetch("http://localhost:3001/login", {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(loginData),
+        });
+    };
+        // console.log(readUserData.status);
+        // console.log(readUserData.status.Text);
+
+        // if (response.status === 200) {
+        //     let data = await response.text();
+        // }
        
     
-    loginForm.addEventListener("submit", e => {
-        e.preventDefault();
-       
+        loginForm.addEventListener("submit", e => {
+            e.preventDefault();
+            loginUser();
+        
 
         // Perfom your fetch Login
 
-        setFormMessage(loginForm, "error", "Invalid")
+        // setFormMessage(loginForm, "error", "Invalid")
     });
+
     const createUser = async () => {
         const user_name = document.querySelector("#signUpUsername").value;
         const password = document.querySelector("#signUpPassword").value;
@@ -81,12 +86,13 @@ document.addEventListener("DOMContentLoaded", () => {
             mode: "cors",
             headers: {
                 'Content-Type': 'application/json',
+                'Access-Control-Allow-Credentials': "true",
             },
             body: JSON.stringify(userData),
             
             
         });
-        console.log(createUserData)
+      
     };
         createAccountForm.addEventListener('submit', e => {
         e.preventDefault();
@@ -94,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         console.log("button was pressed")
     });
+
     
 
     document.querySelectorAll(".form-input").forEach(inputElement => {
@@ -102,12 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 setInputElement(inputElement, "username must be at least 10 characters.")
             }
     
-            })
+            });
             inputElement.addEventListener('input', e => {
                 clearInputError(inputElement);
-            })
-    })
-})
-    
-
+            });
+    });
 
