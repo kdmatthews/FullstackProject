@@ -1,6 +1,9 @@
 
 
-
+// The following functions are used for changing the form-message when a user is entering information.
+// It is designed to give the user error messages or success messages. 
+// In this project I only have one error message displayed as I decided it was best to put my time into
+// other pieces of this project. However more can be added.
 function setFormMessage(formElement, type, message){
     const messageElement = formElement.querySelector('.form-message')
 
@@ -19,8 +22,8 @@ function clearInputError(inputElement){
     inputElement.parentElement.querySelector(".form-input-error-message").innerHTML = "";
 }
 
-
-
+// These are the event listeners for the sign in and create acount links.
+// When either link is pressed the page will switch to the other form.
 
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector('#login');
@@ -38,36 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
         loginForm.classList.remove('form-hidden')
 
     });
-    // const loginUser = async () => {
-    //     const user_name = document.querySelector("#loginUsername").value
-    //     const password = document.querySelector("#loginPassword").value
-    //     const loginData = {
-    //         user_name,
-    //         password,
-    //     }
-    //     const readUserData = await fetch("http://localhost:3001/read_user", {
-    //         method: "GET",
-    //         mode: "cors",
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify(loginData),
-    //     }) 
-    //     console.log(readUserData.status);
-    //     console.log(readUserData.status.Text);
-
-    //     if (response.status === 200) {
-    //         let data = await response.text();
-    //     }
-    
-    
-    // loginForm.addEventListener("submit", e => {
-    //     e.preventDefault();
-      
-    //     // Perfom your fetch Login
-
-    //     setFormMessage(loginForm, "error", "Invalid")
-    // });
+   
+    // The createUser function fetches the route creat user and links to the users database.
+    // When a user submits their username and password it will be sent to the database.
     const createUser = async () => {
         const user_name = document.querySelector("#signUpUsername").value;
         const password = document.querySelector("#signUpPassword").value;
@@ -75,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             user_name: user_name,
             password: password,
         };
-        console.log(userData)
+       
         const createUserData = await fetch("http://localhost:3001/create_user", {
             method: "POST",
             mode: "cors",
@@ -86,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             
         });
-        console.log(createUserData)
+       
     };
         createAccountForm.addEventListener('submit', e => {
         e.preventDefault();
@@ -94,10 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
         createAccountForm.classList.add('form-hidden')
         loginForm.classList.remove('form-hidden')
 
-        console.log("button was pressed")
+       
     });
     
-
+// This is the one error message I used for the create account page. 
+// It displays a message when the username is less than 10 characters.
     document.querySelectorAll(".form-input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
             if (e.target.id === "signUpUsername" && e.target.value.length > 0 && e.target.value.length < 10){

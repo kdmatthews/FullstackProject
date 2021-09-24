@@ -1,4 +1,7 @@
 
+
+// The rideDeleting function will access the delete route from the backend. 
+// This will allow the user to delete rides from the itinerary.
 const rideDeleting = async (id) => {
     const addRide = await fetch(`http://localhost:3001/delete_id/${id}`, {
         method: "DELETE",
@@ -12,11 +15,11 @@ const rideDeleting = async (id) => {
 
 
 
-
-
+// The readItinerary function gets the route that selects all from the itinerary database. 
+// After fetching, the DOM manipulation will access the specific elements needed from the database
+//  and display them on the page.
 
 const readItinerary= async () => {
-    // const url = "http://localhost:3001/read_rides";
     const itineraryData = await fetch ("http://localhost:3001/read_itinerary", {
         method: "GET",
         mode: "cors",
@@ -25,7 +28,6 @@ const readItinerary= async () => {
         }
     })
     const json = await itineraryData.json();
-    console.log(json)
     for (const i in json.rows){
         const itinerary_data = json.rows[i]
         const itineraryContainer = document.querySelector('.itinerary-container')
@@ -44,23 +46,21 @@ const readItinerary= async () => {
         const rideDetails = document.createElement('div');
         rideDetails.className = "ride-details"
         rideDetails.id = `div-${id}`
-        console.log(rideDetails.id)
         rideName.innerHTML = ride_name;
 
-       
-      
         rideDetails.append(rideName, ridePicture, button);
-       
-       
-       
         itineraryContainer.append(rideDetails);
 
+        // This is the event listener for the delete-button created in the DOM above
+        // When the delete button is pressed the rideDeleting function gets called and the ride
+        // is delted from the itinerary. 
+        // The deleteDiv portion allows it to target the individual id for each ride so it only deletes
+        // the ride selected by the user and not all of the rides without having to refresh the page.
         button.addEventListener('click', e => {
             e.preventDefault
            
             rideDeleting(e.currentTarget.id)
             const deleteDiv = document.querySelector(`#div-${id}`)
-            console.log(deleteDiv)
             deleteDiv.parentNode.removeChild(deleteDiv)
 
 
@@ -70,5 +70,6 @@ const readItinerary= async () => {
         
     }
 }
+
 
 readItinerary();

@@ -1,26 +1,7 @@
 
 
-// RIDES
-
-
-// const readData = async () => {
-//     const url = "http://localhost:3007/getItems";
-//     const userData = await fetch (url, {
-//         method: "POST",
-//         mode: "cors",
-//         headers: {
-//             'Content-Type': 'application/json',
-//             },
-        
-//     });
-//     const json = await userData.json();
-//     for(const item of json) {
-//         const todo_item = item.todo_item
-//         const itemName = document.createElement('p');
-//         const itemDetails = document.createElement('div')
-//         itemName.innerHTML = todo_item
-//         itemDetails.append(itemName);
-//         mainContainer.append(itemDetails);
+// The rideAdding function will access the update route from the backend. 
+// This will allow the user to add rides from the rides page to the itinerary page.
 const rideAdding = async (id) => {
     const addRide = await fetch(`http://localhost:3001/update_itinerary/${id}`, {
         method: "PUT",
@@ -33,8 +14,10 @@ const rideAdding = async (id) => {
 }
 
 
+// The readRides function gets the route that selects all from the rides database. 
+// After fetching, the DOM manipulation will access the specific elements needed from the database
+//  and display them on the page.
 const readRides = async () => {
-    // const url = "http://localhost:3001/read_rides";
     const rideData = await fetch ("http://localhost:3001/read_rides", {
         method: "GET",
         mode: "cors",
@@ -73,10 +56,14 @@ const readRides = async () => {
        
         rideContainer.append(rideDetails);
         
+
+         // This is the event listener for the add-button created in the DOM above
+        // When the add button is pressed the rideAdding function gets called and the ride
+        // is added to the itinerary. 
+        // The e.currentTarget.id is used to target the individual rides.
+        // The message is added once the user clicks the button so they know the ride has been added
         button.addEventListener('click', e => {
             e.preventDefault
-           
-           
             rideAdding(e.currentTarget.id)
             const message = document.createElement('h4')
             message.innerHTML = `${ride_name} has been added to your itinerary`
