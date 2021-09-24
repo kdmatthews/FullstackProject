@@ -40,13 +40,7 @@ const readItinerary= async () => {
         rideDetails.className = "ride-details"
         rideDetails.id = `div-${id}`
         rideName.innerHTML = ride_name;
-
-       
-      
         rideDetails.append(rideName, ridePicture, button);
-       
-       
-       
         itineraryContainer.append(rideDetails);
 
         button.addEventListener('click', e => {
