@@ -61,13 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
     //     }
     
     
-    loginForm.addEventListener("submit", e => {
-        e.preventDefault();
+    // loginForm.addEventListener("submit", e => {
+    //     e.preventDefault();
       
-        // Perfom your fetch Login
+    //     // Perfom your fetch Login
 
-        setFormMessage(loginForm, "error", "Invalid")
-    });
+    //     setFormMessage(loginForm, "error", "Invalid")
+    // });
     const createUser = async () => {
         const user_name = document.querySelector("#signUpUsername").value;
         const password = document.querySelector("#signUpPassword").value;

@@ -14,22 +14,18 @@ body {
 
 
 
-
+/* Login Page */
 
 .outside-container {
     background-image: url("https://wallpapercave.com/wp/wp5241124.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
-    /* height: 100vh;
-    width: 100%; */
     display: flex;
     justify-content: center;
 }
 .main-container{
     padding: 7rem;
-    
-    /* max-width: 700px; */
     font-size: 18px;
     box-shadow: 0 0 40px black(0, 0, 0, .2);
     border-radius: 4px;
@@ -205,7 +201,6 @@ button:hover{
 .ride-details{
     display: flex;
     flex-direction: column;
-    /* width: 100vw; */
     border-top:#40B0DF solid .1rem;
     border-right:#40B0DF solid .1rem;
     border-left:#40B0DF solid .1rem;
@@ -228,7 +223,7 @@ h4 {
     height: 40rem;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+   
     
 
 }
@@ -249,11 +244,7 @@ h4 {
 }
 
 
-/* @media screen and (max-width: 768px){
-    .navbar{
-        width: 100vw;
-    }
-} */
+
 
 .delete-button{
     height: 4rem;
@@ -290,7 +281,7 @@ h4 {
     height: 40rem;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    
 }
 
 .itinerary-title{
@@ -301,7 +292,7 @@ h4 {
 }
 
 
-/* Rides Page Media Queries */
+/* Media Queries */
 @media screen and (max-width: 1850px){
     .ride-container{
         display: grid;
@@ -320,7 +311,7 @@ h4 {
     
     
 }
-/* Itinerary Page */
+
 @media screen and (max-width: 1300px){
     .ride-container{
         display: grid;
@@ -338,9 +329,7 @@ h4 {
     .nav-link{
         font-size: 1.5rem;
     }
-    .outside-container{
-        height: 1000px;
-    }
+  
 
   
 }
@@ -369,7 +358,7 @@ h4 {
     }
     .nav-link{
         font-size: 1rem;
-        margin-right: 1rem;
+       
     }
     
 }
