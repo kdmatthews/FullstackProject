@@ -1,6 +1,6 @@
-###Sea World Project
+# Sea World Project
 
-##Description
+## Description
 
 This website was designed to create a Full Stack project as a group. We chose to create a Seaworld itinerary
 project where users could select rides and add them to their itinerary. We pulled styling insperation from the
@@ -10,7 +10,7 @@ Seaworld website. We also used the website ride names and images to use in our d
 <img src="/images/database.jpg" alt="" width="400">
 
 
-##Key Featrues
+## Key Featrues
 -Login Page: This page has two forms one for login and one to create a new user. The create user page
     fetches a route from our backend that allows the user input to be sent to our database. 
 
@@ -33,7 +33,7 @@ Seaworld website. We also used the website ride names and images to use in our d
 
 <img src="/images/route.png" alt=""width="400">
 
-##Technology Used
+## Technology Used
 - HTML, ElephantSQL, Beekeeper, Javascript, and CSS: Bootstrap, Flex, and Grid
 To get this up and running, you must install the following:
     nodemon
@@ -48,7 +48,7 @@ To get this up and running, you must install the following:
 -Github.com to merge the group code, then apply it to the main branch.
 -w3schools.com to adjust the code differences between sequelize and postgres when adapting to ElephantSQL.
 
-##What Was Learned
+## What Was Learned
 
 How to create a database from scratch
 How to use ElephantSQL
@@ -57,4 +57,4 @@ How to create CRUD with multiple tables of a database
 How to go from a great layout to an excellent layout in CSS
 
 
-Medium Article:
+Medium Article: https://medium.com/@usmc.pnlong/sea-world-itinerary-d24e7cdb50c4
