@@ -7,26 +7,31 @@ project where users could select rides and add them to their itinerary. We pulle
 Seaworld website. We also used the website ride names and images to use in our database.
 
 
-<img src="/images/database.jpg" alt="" width="200">
+<img src="/images/database.jpg" alt="" width="400">
 
 
 ##Key Featrues
 -Login Page: This page has two forms one for login and one to create a new user. The create user page
     fetches a route from our backend that allows the user input to be sent to our database. 
 
- <img src="/images/login.png" alt="" width="200">
+ <img src="/images/login.png" alt="" width="400">
 
 
 -Rides Page: This page uses a route to select the ride names and images from our database. In the frontend
     we then fetch this route and use DOM manipulation to display the information on our page. Here users
     can add rides to the itinerary page. The rides will be added via an update route.
-    <img src="/images/rides.png" alt="">
-    <img src="/images/DOM.png" alt="">
+
+<img src="/images/rides.png" alt="" width="400">
+
+<img src="/images/DOM.png" alt="" width="400">
+
 -Itinerary Page: This page also uses DOM manipulation to display information from our database. Here the users
     will see the rides they have added to their itinerary and be able to delete them. In order to make the
     delete function work we needed a delete route on our backend. 
-    <img src="/images/itinerary.png" alt="">
-    <img src="/images/route.png" alt="">
+
+<img src="/images/itinerary.png" alt=""width="400">
+
+<img src="/images/route.png" alt=""width="400">
 
 ##Technology Used
 - HTML, ElephantSQL, Beekeeper, Javascript, and CSS: Bootstrap, Flex, and Grid
