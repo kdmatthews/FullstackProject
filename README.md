@@ -8,11 +8,19 @@ This website was designed to create a Full Stack project as a group.
 
 -Canva.com color scheme named Towering Over can be seen in this project
 -Seaworld.com was a guide to complete this clone that included ride names and pictures.
--
+-ElephantSQL to deploy the website.
+-Medium.com for the description of the website.
+-Github.com to merge the group code, then apply it to the main branch.
+-w3schools.com to adjust the code differences between sequelize and postgres when adapting to ElephantSQL.
 
 
 ##Technology Used
 - HTML, ElephantSQL, Beekeeper, Javascript, and CSS: Bootstrap, Flex, and Grid
+To get this up and running, you must install the following:
+    nodemon
+    npm init
+    npm i express dotenv pg-pool pg
+    npm i cors
 
 ##What Was Learned
 
