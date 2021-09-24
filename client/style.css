@@ -4,6 +4,7 @@ body {
     width: 100vw;
 }
 
+
 /* Navbar */
 
 .nav-link {
@@ -20,17 +21,15 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
-    height: 70vh;
+    height: 100vh;
+    width: 100%;
     display: flex;
-    
-    
-   
     justify-content: center;
 }
 .main-container{
     padding: 7rem;
-    width: 700px;
-    max-width: 700px;
+    /* width: 700px;
+    max-width: 700px; */
     font-size: 18px;
     box-shadow: 0 0 40px black(0, 0, 0, .2);
     border-radius: 4px;
@@ -41,6 +40,7 @@ body {
    
     display: flex;
     justify-content: center;
+    
     
 }
 .hr{
@@ -189,7 +189,7 @@ button:hover{
     background-color: white;
     margin: 2rem;
     height: 100vh;
-    width: 100vw;
+    width: 97.5vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     
@@ -203,14 +203,11 @@ button:hover{
 .ride-details{
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    /* width: 100vw; */
     border-top:#40B0DF solid .1rem;
     border-right:#40B0DF solid .1rem;
     border-left:#40B0DF solid .1rem;
     border-bottom:#40B0DF solid .1rem;
-  
-    
-    
     padding: 3rem;
     
 }
@@ -226,11 +223,11 @@ h4 {
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100%;
-    height: auto;
+    height: 40rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    display: block;
+    
 
 }
 .ride-title{
@@ -242,33 +239,14 @@ h4 {
 
 .ride-pictures{
     border-radius: 20px;
-    width: 100%;
+    /* width: 100%; */
 }
 .ride-name{
     color: #0067B3;
     font-size: 4rem;
 }
 
-/* Rides Page Media Queries */
-@media screen and (max-width: 1700px){
-    .ride-container{
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0;
-       
-    }
-    
-    
-}
-/* Itinerary Page */
-@media screen and (max-width: 768px){
-    .header{
-        width: 100vw;
-    }
-    .navbar{
-        width: 100vw;
-    }
-}
+
 /* @media screen and (max-width: 768px){
     .navbar{
         width: 100vw;
@@ -318,6 +296,118 @@ h4 {
     color: white;
     font-size: 6rem;
     font-family: 'Caveat', cursive;
+}
+
+
+/* Rides Page Media Queries */
+@media screen and (max-width: 1850px){
+    .ride-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 96.5vw;
+       
+       
+    }
+    .itinerary-container{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        width: 96.5vw;
+      
+    }
+
+    
+    
+}
+/* Itinerary Page */
+@media screen and (max-width: 1300px){
+    .ride-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 95.5vw;
+        margin-left: 1rem;
+       
+}
+    .itinerary-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 95.5vw;
+        margin-left: 1rem;
+    }
+    .nav-link{
+        font-size: 1.5rem;
+    }
+    .outside-container{
+        height: 1000px;
+    }
+
+  
+}
+
+@media screen and (max-width: 570px){
+    .header {
+        width: 100%;
+        
+    }
+    .ride-details {
+        width: 94vw;
+       
+    }
+    .add-button{
+        width: 75vw;
+    }
+    .delete-button{
+        width: 75vw;
+    }
+    /* .outside-container{
+        height: 1100px;
+    } */
+   
+    .logo img{
+        width: 20rem;
+    }
+    .nav-link{
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+    
+}
+
+@media screen and (max-width: 376px){
+    .header h1{
+        font-size: 5rem;
+        
+    }
+    .header-plan h1{
+        font-size: 5rem;
+    }
+    body{
+        width: 110%;
+    }
+   
+   
+    
+   
+}
+@media screen and (max-width: 325px){
+    .nav-link{
+        font-size: 1rem;
+    }
+    /* .main-container{
+        width:950px;
+    } */
+    .header h1{
+        font-size: 4rem;
+        
+    }
+    .header-plan h1{
+        font-size: 4rem;
+    }
+    body{
+        width: 124%;
+    }
+   
+    
+
 }
 
 
