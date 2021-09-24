@@ -1,26 +1,60 @@
 
+body {
+    height: 100vh;
+    width: 100vw;
+}
 
+
+/* Navbar */
+
+.nav-link {
+    font-size: 2rem;
+    font-family: 'Play', sans-serif;
+}
+
+
+
+/* Login Page */
 
 .outside-container {
-    background-color: #0067B3;
+    background-image: url("https://wallpapercave.com/wp/wp5241124.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
-    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 .main-container{
-    margin: 1rem;
-    padding: 2rem;
-    width: 700px;
-    max-width: 700px;
-    background-color: #FFD53D;
+    padding: 7rem;
     font-size: 18px;
     box-shadow: 0 0 40px black(0, 0, 0, .2);
     border-radius: 4px;
+   
 
 }
-
+.logo{
+   
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.hr{
+    color: #40B0DF;
+    width: 100%;
+    opacity: 5;
+}
+.footer{
+    text-align: center;
+    
+    
+}
+.footer img{
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
 /* Login Page */
 .form-input:focus{
     border-color: blue;
@@ -31,21 +65,21 @@
 .form-hidden{
     display: none;
 }
-/* .main-container,
-.form-input,
-.form-button {
-    /* put font style here 500, 400, and bold */
+
 #username{
     font-size: 1.5rem;
+    
     }
 
 #password{
     font-size: 1.5rem;
+    
     }
 .form-title{
     margin-bottom: 2rem;
     text-align: center;
-    font-size: 50px;
+    font-size: 5.5rem;
+    font-family: 'Play', sans-serif;
 }
 
 .form-message{
@@ -72,7 +106,7 @@
     
     box-sizing: border-box;
     border-radius: 4px;
-    border: rgb(238, 234, 234);
+    border: blue (238, 234, 234);
     outline: none;
     background:white(209, 224, 243);
 
@@ -104,9 +138,10 @@
     background: #0000A3;
     margin-bottom: .6rem;
     margin-top: .6rem;
+    font-family: 'Play', sans-serif;
 }
 button:hover{
-    background: #0067B3;
+    background: #FFD53D;
 }
 .form-button:active{
     transform: scale(0.98);
@@ -118,7 +153,8 @@ button:hover{
     color: blue;
     text-decoration: none;
     cursor: pointer;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
+    font-family: 'Play', sans-serif;
     
 }
 .create-link:hover{
@@ -151,44 +187,44 @@ button:hover{
     background-color: white;
     margin: 2rem;
     height: 100vh;
+    width: 97.5vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     
     text-align: center;
     font-family: 'Caveat', cursive;
     
-    /* border: .3rem black solid; */
+ 
     
 }
 
 .ride-details{
     display: flex;
     flex-direction: column;
-    /* gap: .5rem; */
     border-top:#40B0DF solid .1rem;
     border-right:#40B0DF solid .1rem;
     border-left:#40B0DF solid .1rem;
     border-bottom:#40B0DF solid .1rem;
-  
-    
-    
     padding: 3rem;
-    /* border: .3rem blue solid; */
+    
 }
 
-/* img{
-    padding: .5rem;
-} */
 
+h4 {
+   
+    padding-top: 1.5rem;
+    
+}
 .header{
     background-image: url("https://seaworld.com/orlando/-/media/seaworld-orlando/images/rides/scope/1900x700-swo-mako-and-kraken-aerial.ashx?version=1_202008042749");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    max-width: 100%;
     height: 40rem;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+   
+    
 
 }
 .ride-title{
@@ -200,13 +236,15 @@ button:hover{
 
 .ride-pictures{
     border-radius: 20px;
+    /* width: 100%; */
 }
 .ride-name{
     color: #0067B3;
     font-size: 4rem;
 }
-/* Itinerary Page */
-/* Rides Page */
+
+
+
 
 .delete-button{
     height: 4rem;
@@ -231,19 +269,19 @@ button:hover{
     text-align: center;
     font-family: 'Caveat', cursive;
     
-    /* border: .3rem black solid; */
+
     
 }
 
 .header-plan{
-    background-image: url("https://seaworld.com/orlando/-/media/seaworld-orlando/images/shows/dolphin-adventures/1900x500-swo-shows-dolphin-adventures.ashx?version=1_202106291020");
+    background-image: url("https://seaworld.com/orlando/-/media/seaworld-orlando/images/educational-programs/day-camps/banners/turtletrek_camp-girl_1900x700.ashx?version=1_201904190931");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 40rem;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    
 }
 
 .itinerary-title{
@@ -251,6 +289,112 @@ button:hover{
     color: white;
     font-size: 6rem;
     font-family: 'Caveat', cursive;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 1850px){
+    .ride-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 96.5vw;
+       
+       
+    }
+    .itinerary-container{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        width: 96.5vw;
+      
+    }
+
+    
+    
+}
+
+@media screen and (max-width: 1300px){
+    .ride-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 95.5vw;
+        margin-left: 1rem;
+       
+}
+    .itinerary-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 95.5vw;
+        margin-left: 1rem;
+    }
+    .nav-link{
+        font-size: 1.5rem;
+    }
+  
+
+  
+}
+
+@media screen and (max-width: 570px){
+    .header {
+        width: 100%;
+        
+    }
+    .ride-details {
+        width: 94vw;
+       
+    }
+    .add-button{
+        width: 75vw;
+    }
+    .delete-button{
+        width: 75vw;
+    }
+    /* .outside-container{
+        height: 1100px;
+    } */
+   
+    .logo img{
+        width: 20rem;
+    }
+    .nav-link{
+        font-size: 1rem;
+       
+    }
+    
+}
+
+@media screen and (max-width: 376px){
+    .header h1{
+        font-size: 5rem;
+        
+    }
+    .header-plan h1{
+        font-size: 5rem;
+    }
+    
+   
+   
+    
+   
+}
+@media screen and (max-width: 325px){
+    .nav-link{
+        font-size: 1rem;
+    }
+    /* .main-container{
+        width:950px;
+    } */
+    .header h1{
+        font-size: 4rem;
+        
+    }
+    .header-plan h1{
+        font-size: 4rem;
+    }
+   
+   
+    
+
 }
 
 

@@ -1,5 +1,6 @@
 
 
+
 function setFormMessage(formElement, type, message){
     const messageElement = formElement.querySelector('.form-message')
 
@@ -58,16 +59,15 @@ document.addEventListener("DOMContentLoaded", () => {
     //     if (response.status === 200) {
     //         let data = await response.text();
     //     }
-       
     
-    loginForm.addEventListener("submit", e => {
-        e.preventDefault();
-       
+    
+    // loginForm.addEventListener("submit", e => {
+    //     e.preventDefault();
+      
+    //     // Perfom your fetch Login
 
-        // Perfom your fetch Login
-
-        setFormMessage(loginForm, "error", "Invalid")
-    });
+    //     setFormMessage(loginForm, "error", "Invalid")
+    // });
     const createUser = async () => {
         const user_name = document.querySelector("#signUpUsername").value;
         const password = document.querySelector("#signUpPassword").value;
@@ -91,6 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
         createAccountForm.addEventListener('submit', e => {
         e.preventDefault();
         createUser();
+        createAccountForm.classList.add('form-hidden')
+        loginForm.classList.remove('form-hidden')
 
         console.log("button was pressed")
     });
