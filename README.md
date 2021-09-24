@@ -7,16 +7,16 @@ project where users could select rides and add them to their itinerary. We pulle
 Seaworld website. We also used the website ride names and images to use in our database.
 
 
-    <img src="/images/database.jpg" alt="" width="200">
+<img src="/images/database.jpg" alt="" width="200">
 
 
 ##Key Featrues
 -Login Page: This page has two forms one for login and one to create a new user. The create user page
     fetches a route from our backend that allows the user input to be sent to our database. 
 
-    <img src="/images/login.png" alt="" width="200">
+ <img src="/images/login.png" alt="" width="200">
 
-    
+
 -Rides Page: This page uses a route to select the ride names and images from our database. In the frontend
     we then fetch this route and use DOM manipulation to display the information on our page. Here users
     can add rides to the itinerary page. The rides will be added via an update route.
