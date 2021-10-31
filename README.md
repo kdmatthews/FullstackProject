@@ -29,9 +29,12 @@ Seaworld website. We also used the website ride names and images to use in our d
     will see the rides they have added to their itinerary and be able to delete them. In order to make the
     delete function work we needed a delete route on our backend. 
 
+<p>
 <img src="/images/itinerary.png" alt=""width="400">
-
+</p>
+<p>
 <img src="/images/route.png" alt=""width="400">
+</p>
 
 ## Technology Used
 - HTML, ElephantSQL, Beekeeper, Javascript, and CSS: Bootstrap, Flex, and Grid
