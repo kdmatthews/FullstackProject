@@ -58,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
   createAccountForm.addEventListener("submit", (e) => {
     e.preventDefault();
     createUser();
+    createAccountForm.classList.add("form-hidden");
+    loginForm.classList.remove("form-hidden");
   });
 
   document.querySelectorAll(".form-input").forEach((inputElement) => {
