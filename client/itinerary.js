@@ -11,12 +11,7 @@ const rideDeleting = async (id) => {
 }
 
 
-
-
-
-
 const readItinerary= async () => {
-    // const url = "http://localhost:3001/read_rides";
     const itineraryData = await fetch ("http://localhost:3001/read_itinerary", {
         method: "GET",
         mode: "cors",
@@ -44,15 +39,8 @@ const readItinerary= async () => {
         const rideDetails = document.createElement('div');
         rideDetails.className = "ride-details"
         rideDetails.id = `div-${id}`
-        console.log(rideDetails.id)
         rideName.innerHTML = ride_name;
-
-       
-      
         rideDetails.append(rideName, ridePicture, button);
-       
-       
-       
         itineraryContainer.append(rideDetails);
 
         button.addEventListener('click', e => {
@@ -60,7 +48,6 @@ const readItinerary= async () => {
            
             rideDeleting(e.currentTarget.id)
             const deleteDiv = document.querySelector(`#div-${id}`)
-            console.log(deleteDiv)
             deleteDiv.parentNode.removeChild(deleteDiv)
 
 
