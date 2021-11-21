@@ -54,30 +54,29 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       body: JSON.stringify(userData),
     });
-
-    createAccountForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      createUser();
-      createAccountForm.classList.add("form-hidden");
-      loginForm.classList.remove("form-hidden");
-
-      document.querySelectorAll(".form-input").forEach((inputElement) => {
-        inputElement.addEventListener("blur", (e) => {
-          if (
-            e.target.id === "signUpUsername" &&
-            e.target.value.length > 0 &&
-            e.target.value.length < 10
-          ) {
-            setInputElement(
-              inputElement,
-              "username must be at least 10 characters."
-            );
-          }
-        });
-        inputElement.addEventListener("input", (e) => {
-          clearInputError(inputElement);
-        });
-      });
-    });
   };
+  createAccountForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    createUser();
+    createAccountForm.classList.add("form-hidden");
+    loginForm.classList.remove("form-hidden");
+  });
+
+  document.querySelectorAll(".form-input").forEach((inputElement) => {
+    inputElement.addEventListener("blur", (e) => {
+      if (
+        e.target.id === "signUpUsername" &&
+        e.target.value.length > 0 &&
+        e.target.value.length < 10
+      ) {
+        setInputElement(
+          inputElement,
+          "username must be at least 10 characters."
+        );
+      }
+    });
+    inputElement.addEventListener("input", (e) => {
+      clearInputError(inputElement);
+    });
+  });
 });
