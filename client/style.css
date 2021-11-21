@@ -1,260 +1,329 @@
-
-
-
-.outside-container {
-    background-color: #0067B3;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+  height: 100vh;
+  width: 100vw;
 }
-.main-container{
-    margin: 1rem;
-    padding: 2rem;
-    width: 700px;
-    max-width: 700px;
-    background-color: #FFD53D;
-    font-size: 18px;
-    box-shadow: 0 0 40px black(0, 0, 0, .2);
-    border-radius: 4px;
 
+/* Navbar */
+
+.nav-link {
+  font-size: 2rem;
+  font-family: "Play", sans-serif;
 }
 
 /* Login Page */
-.form-input:focus{
-    border-color: blue;
-    background-color: #D4F1F4;
 
+.outside-container {
+  background-image: url("https://wallpapercave.com/wp/wp5241124.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.main-container {
+  padding: 7rem;
+  font-size: 18px;
+  box-shadow: 0 0 40px black(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.hr {
+  color: #40b0df;
+  width: 100%;
+  opacity: 5;
+}
+.footer {
+  text-align: center;
+}
+.footer img {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+/* Login Page */
+.form-input:focus {
+  border-color: blue;
+  background-color: #d4f1f4;
 }
 
-.form-hidden{
-    display: none;
+.form-hidden {
+  display: none;
 }
-/* .main-container,
-.form-input,
+
+#username {
+  font-size: 1.5rem;
+}
+
+#password {
+  font-size: 1.5rem;
+}
+.form-title {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 5.5rem;
+  font-family: "Play", sans-serif;
+}
+
+.form-message {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-message-success {
+  color: green;
+}
+.form-message-error {
+  color: red;
+}
+
+.inputs {
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: blue (238, 234, 234);
+  outline: none;
+  background: white(209, 224, 243);
+}
+
+.form-input-error {
+  color: red;
+  border-color: red;
+}
+
+.form-input-error-message {
+  margin-top: 0 0.5rem;
+  font-size: 0.85rem;
+  color: red;
+  border: red;
+}
+
 .form-button {
-    /* put font style here 500, 400, and bold */
-#username{
-    font-size: 1.5rem;
-    }
-
-#password{
-    font-size: 1.5rem;
-    }
-.form-title{
-    margin-bottom: 2rem;
-    text-align: center;
-    font-size: 50px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  background: #0000a3;
+  margin-bottom: 0.6rem;
+  margin-top: 0.6rem;
+  font-family: "Play", sans-serif;
 }
-
-.form-message{
-    text-align: center;
-    margin-bottom: 1rem;
+button:hover {
+  background: #ffd53d;
 }
-
-.form-message-success{
-    color: green;
+.form-button:active {
+  transform: scale(0.98);
 }
-.form-message-error{
-    color: red;
+.form-text {
+  text-align: center;
 }
-
-.inputs{
-    margin-bottom: 1rem;
-
+.create-link {
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.7rem;
+  font-family: "Play", sans-serif;
 }
-
-.form-input{
-    display:block;
-    width: 100%;
-    padding: 1rem;
-    
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: rgb(238, 234, 234);
-    outline: none;
-    background:white(209, 224, 243);
-
+.create-link:hover {
+  text-decoration: underline;
 }
-
-.form-input-error{
-    color: red;
-    border-color: red;
-}
-
-.form-input-error-message{
-    margin-top: 0 .5rem;
-    font-size: .85rem;
-    color: red;
-    border: red;
-}
-
-.form-button{
-    width: 100%;
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    outline: none;
-    cursor: pointer;
-    background: #0000A3;
-    margin-bottom: .6rem;
-    margin-top: .6rem;
-}
-button:hover{
-    background: #0067B3;
-}
-.form-button:active{
-    transform: scale(0.98);
-}
-.form-text{
-    text-align: center;
-}
-.create-link{
-    color: blue;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 1.3rem;
-    
-}
-.create-link:hover{
-    text-decoration: underline;
-}
-
-
-
-
-
-
-
 
 /* Rides Page */
 
-.add-button{
-    height: 4rem;
-    width: 30rem;
-    background-color: #40B0DF;
-    border: none;
-    font-size: 1.7rem;
-    color: #0067B3;
-    border-radius: 6px;
-    align-self: center;
-    margin-top: 1rem;
-    
+.add-button {
+  height: 4rem;
+  width: 30rem;
+  background-color: #40b0df;
+  border: none;
+  font-size: 1.7rem;
+  color: #0067b3;
+  border-radius: 6px;
+  align-self: center;
+  margin-top: 1rem;
 }
 
-.ride-container{
-    background-color: white;
-    margin: 2rem;
-    height: 100vh;
+.ride-container {
+  background-color: white;
+  margin: 2rem;
+  height: 100vh;
+  width: 97.5vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  text-align: center;
+  font-family: "Caveat", cursive;
+}
+
+.ride-details {
+  display: flex;
+  flex-direction: column;
+  border-top: #40b0df solid 0.1rem;
+  border-right: #40b0df solid 0.1rem;
+  border-left: #40b0df solid 0.1rem;
+  border-bottom: #40b0df solid 0.1rem;
+  padding: 3rem;
+}
+
+h4 {
+  padding-top: 1.5rem;
+}
+.header {
+  background-image: url("https://seaworld.com/orlando/-/media/seaworld-orlando/images/rides/scope/1900x700-swo-mako-and-kraken-aerial.ashx?version=1_202008042749");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: 40rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.ride-title {
+  margin: 5rem;
+  color: white;
+  font-size: 6rem;
+  font-family: "Caveat", cursive;
+}
+
+.ride-pictures {
+  border-radius: 20px;
+  /* width: 100%; */
+}
+.ride-name {
+  color: #0067b3;
+  font-size: 4rem;
+}
+
+.delete-button {
+  height: 4rem;
+  width: 30rem;
+  background-color: #40b0df;
+  border: none;
+  font-size: 1.7rem;
+  color: #0067b3;
+  border-radius: 6px;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+.itinerary-container {
+  background-color: white;
+  margin: 2rem;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  text-align: center;
+  font-family: "Caveat", cursive;
+}
+
+.header-plan {
+  background-image: url("https://seaworld.com/orlando/-/media/seaworld-orlando/images/educational-programs/day-camps/banners/turtletrek_camp-girl_1900x700.ashx?version=1_201904190931");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.itinerary-title {
+  margin: 5rem;
+  color: white;
+  font-size: 6rem;
+  font-family: "Caveat", cursive;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1850px) {
+  .ride-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    
-    text-align: center;
-    font-family: 'Caveat', cursive;
-    
-    /* border: .3rem black solid; */
-    
+    grid-template-columns: 1fr 1fr;
+    width: 96.5vw;
+  }
+  .itinerary-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 96.5vw;
+  }
 }
 
-.ride-details{
-    display: flex;
-    flex-direction: column;
-    /* gap: .5rem; */
-    border-top:#40B0DF solid .1rem;
-    border-right:#40B0DF solid .1rem;
-    border-left:#40B0DF solid .1rem;
-    border-bottom:#40B0DF solid .1rem;
-  
-    
-    
-    padding: 3rem;
-    /* border: .3rem blue solid; */
+@media screen and (max-width: 1300px) {
+  .ride-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95.5vw;
+    margin-left: 1rem;
+  }
+  .itinerary-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95.5vw;
+    margin-left: 1rem;
+  }
+  .nav-link {
+    font-size: 1.5rem;
+  }
 }
 
-/* img{
-    padding: .5rem;
-} */
-
-.header{
-    background-image: url("https://seaworld.com/orlando/-/media/seaworld-orlando/images/rides/scope/1900x700-swo-mako-and-kraken-aerial.ashx?version=1_202008042749");
-    background-repeat: no-repeat;
-    background-size: cover;
+@media screen and (max-width: 570px) {
+  .header {
     width: 100%;
-    height: 40rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+  }
+  .ride-details {
+    width: 94vw;
+  }
+  .add-button {
+    width: 75vw;
+  }
+  .delete-button {
+    width: 75vw;
+  }
+  /* .outside-container{
+        height: 1100px;
+    } */
 
-}
-.ride-title{
-    margin: 5rem;
-    color: white;
-    font-size: 6rem;
-    font-family: 'Caveat', cursive;
+  .logo img {
+    width: 20rem;
+  }
+  .nav-link {
+    font-size: 1rem;
+  }
 }
 
-.ride-pictures{
-    border-radius: 20px;
+@media screen and (max-width: 376px) {
+  .header h1 {
+    font-size: 5rem;
+  }
+  .header-plan h1 {
+    font-size: 5rem;
+  }
 }
-.ride-name{
-    color: #0067B3;
+@media screen and (max-width: 325px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+  /* .main-container{
+        width:950px;
+    } */
+  .header h1 {
     font-size: 4rem;
+  }
+  .header-plan h1 {
+    font-size: 4rem;
+  }
 }
-/* Itinerary Page */
-/* Rides Page */
-
-.delete-button{
-    height: 4rem;
-    width: 30rem;
-    background-color: #40B0DF;
-    border: none;
-    font-size: 1.7rem;
-    color: #0067B3;
-    border-radius: 6px;
-    align-self: center;
-    margin-top: 1rem;
-    
-}
-
-.itinerary-container{
-    background-color: white;
-    margin: 2rem;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    
-    text-align: center;
-    font-family: 'Caveat', cursive;
-    
-    /* border: .3rem black solid; */
-    
-}
-
-.header-plan{
-    background-image: url("https://seaworld.com/orlando/-/media/seaworld-orlando/images/shows/dolphin-adventures/1900x500-swo-shows-dolphin-adventures.ashx?version=1_202106291020");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 40rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
-
-.itinerary-title{
-    margin: 5rem;
-    color: white;
-    font-size: 6rem;
-    font-family: 'Caveat', cursive;
-}
-
-
-
-
-/* NEW CODE FOR DROPDOWN */
-
